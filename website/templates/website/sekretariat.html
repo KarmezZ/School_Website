@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sekretariat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <nav class="block block--dark collapsible nav">
+      <img
+        src="{% static 'icons/menu.svg' %}"
+        alt=""
+        class="icon collapsible__toggler nav__toggler"
+      />
+      <div class="collapsible__content">
+        <ul class="list nav__content">
+          <li>
+            <a href="/">Strona głowna</a>
+          </li>
+          <li><a href="{% url 'website:news_page' %}">Aktualności</a></li>
+          <li><a href="{% url 'website:rekrutacja_page' %}">Rekrutacja</a></li>
+          <li>
+            <a href="{% url 'website:info_parents_page' %}"
+              >Informacje dla rodziców</a
+            >
+          </li>
+          <li>
+            <a
+              href="{% url 'website:sekretariat_page' %}"
+              style="color: #00d9ff; font-weight: 700"
+              >Sekretariat</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'website:zdjęcia_page' %}">Zdjęcia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="sekretariat-image">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="{% static 'images/logo.webp' %} 1x, {% static 'images/logo@2x.webp' %} 2x"
+        />
+        <source
+          type="image/jpg"
+          srcset="{% static 'images/logo.jpg' %} 1x, {% static 'images/logo@2x.jpg' %} 2x"
+        />
+        <img src="{% static 'images/logo@2x.jpg' %}" alt="" />
+      </picture>
+    </div>
+    <section class="block sekretariat-block">
+      <h2 class="sekretariat-block__heading">Sekretariat</h2>
+      <div class="container sekretariat-block__content">
+        <a
+          href="{% static 'pdfs/regulamin-ksztalcenia-na-odleglosc.pdf' %}"
+          download
+          class="btn--pdf"
+          >Regulamin ksztalcenia na odleglość<i class="fa-solid fa-file-pdf"></i
+        ></a>
+        <a
+          href="{% static 'pdfs/KLAUZULA_INFORMACYJNA_RODO.pdf' %}"
+          download
+          class="btn--pdf"
+          >Klauzula Informacyjna / Rodo<i class="fa-solid fa-file-pdf"></i
+        ></a>
+        <a
+          href="{% static 'pdfs/PROCEDURY-WYDAWANIA-DUPLIKATOW-SWIADECTW.pdf' %}"
+          download
+          class="btn--pdf"
+          >procedury wydawania duplikatów świadectw<i
+            class="fa-solid fa-file-pdf"
+          ></i
+        ></a>
+        <a
+          href="{% static 'pdfs/podanie-o-wydanie-duplikatu-legitymacji-szkolnej.pdf' %}"
+          download
+          class="btn--pdf"
+          >podanie o wydanie duplikatu legitymacji szkolnej<i
+            class="fa-solid fa-file-pdf"
+          ></i
+        ></a>
+        <a
+          href="{% static 'pdfs/podanie-o-wydanie-duplikatu-swiadectwa.pdf' %}"
+          download
+          class="btn--pdf"
+          target="_blank"
+          >podanie o wydanie duplikatu swiadectwa<i
+            class="fa-solid fa-file-pdf"
+          ></i
+        ></a>
+      </div>
+    </section>
+    <section class="block books-block">
+      <div class="container grid grid--1x2 grid--1x3 books-block__content">
+        <div>
+          <a
+            href="{% static 'pdfs/Szkolny-zestaw-podrecznikow-LICEUM-OGOLNOKSZTALCACE.pdf' %}"
+            download
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="{% static 'images/zestaw-liceum.webp' %} 1x, {% static 'images/zestaw-liceum@2x.webp' %} 2x"
+              />
+              <source
+                type="image/jpg"
+                srcset="{% static 'images/zestaw-liceum.jpg' %} 1x, {% static 'images/zestaw-liceum@2x.jpg' %} 2x"
+              />
+              <img
+                src="{% static 'images/zestaw-liceum@2x.jpg' %}"
+                alt=""
+                class="books-image"
+              />
+            </picture>
+          </a>
+        </div>
+        <div>
+          <a
+            href="{% static 'pdfs/Szkolny-zestaw-podrecznikow-TECHNIKUM.pdf' %}"
+            download
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="{% static 'images/zestaw-technikum.webp' %} 1x, {% static 'images/zestaw-technikum@2x.webp' %} 2x"
+              />
+              <source
+                type="image/jpg"
+                srcset="{% static 'images/zestaw-technikum.jpg' %} 1x, {% static 'images/zestaw-technikum@2x.jpg' %} 2x"
+              />
+              <img
+                src="{% static 'images/zestaw-technikum@2x.jpg' %}"
+                alt=""
+                class="books-image"
+              />
+            </picture>
+          </a>
+        </div>
+        <div>
+          <a
+            href="{% static 'pdfs/Szkolny-zestaw-podrecznikow-BRANZOWA-SZKOLA-I-STOPNIA.pdf' %}"
+            download
+          >
+            <picture>
+              <source
+                type="image/webp"
+                srcset="{% static 'images/zestaw-zawodowka.webp' %} 1x, {% static 'images/zestaw-zawodowka@2x.webp' %} 2x"
+              />
+              <source
+                type="image/jpg"
+                srcset="{% static 'images/zestaw-zawodowka.jpg' %} 1x, {% static 'images/zestaw-zawodowka@2x.jpg' %} 2x"
+              />
+              <img
+                src="{% static 'images/zestaw-zawodowka@2x.jpg' %}"
+                alt=""
+                class="books-image"
+              />
+            </picture>
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="block contact-block">
+      <div class="container contact-block__content">
+        <a href="tel: +48297721429" target="_blank"
+          ><i class="fa-solid fa-phone"></i>+48297721429</a
+        >
+        <a
+          href="mailto: zsp.myszyniec@powiatostrolecki.pl"
+          target="_blank"
+          class="contact-block__mail"
+          ><i class="fa-solid fa-envelope"></i
+          >zsp.myszyniec@powiatostrolecki.pl</a
+        >
+        <a
+          href="https://www.google.com/maps/place/Zesp%C3%B3%C5%82+Szk%C3%B3%C5%82+Powiatowych+im.ks.+Adama+Bargielskiego+w+Myszy%C5%84cu/@53.3865742,21.341534,17z/data=!3m1!4b1!4m6!3m5!1s0x471e0f561d8ed33f:0xce5bfc54206343d6!8m2!3d53.386571!4d21.3441089!16s%2Fg%2F1hf9wnkqm?entry=ttu"
+          target="_blank"
+          class="contact-block__location"
+          ><i class="fa-solid fa-location-dot"></i>07-430 Myszyniec, ul. Dzieci
+          Polskich 5</a
+        >
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/ef2d73a8ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

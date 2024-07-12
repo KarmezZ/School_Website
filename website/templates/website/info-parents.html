@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Informacje dla rodziców</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <nav class="block block--dark collapsible nav">
+      <img
+        src="{% static 'icons/menu.svg' %}"
+        alt=""
+        class="icon collapsible__toggler nav__toggler"
+      />
+      <div class="collapsible__content">
+        <ul class="list nav__content">
+          <li>
+            <a href="/">Strona głowna</a>
+          </li>
+          <li><a href="{% url 'website:news_page' %}">Aktualności</a></li>
+          <li><a href="{% url 'website:rekrutacja_page' %}">Rekrutacja</a></li>
+          <li>
+            <a
+              href="{% url 'website:info_parents_page' %}"
+              style="color: #00d9ff; font-weight: 700"
+              >Informacje dla rodziców</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'website:sekretariat_page' %}">Sekretariat</a>
+          </li>
+          <li>
+            <a href="{% url 'website:zdjęcia_page' %}">Zdjęcia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="block parents-info-block">
+      <h2>Informacje dla rodziców</h2>
+      <div class="container parents-info-block__header">
+        <p>
+          Zarząd Rady Rodziców przy Zespole Szkół Powiatowych im. ks. Adama
+          Bargielskiego w Myszyńcu w roku szkolnym 2023/2024 tworzą
+          przedstawiciele z trójek klasowych:
+        </p>
+        <ul class="list">
+          <li>Przewodnicząca – Anna Wróblewska</li>
+          <li>Z-ca przewodniczącej – Magdalena Siok</li>
+          <li>Sekretarz – Joanna Pliszka</li>
+          <li>Członek – Teresa Drężek</li>
+          <li>Członek – Stanisław Drężek</li>
+        </ul>
+      </div>
+      <div class="parents-info-block__content">
+        <h3>Dni wolne od zajęć dydaktycznych w roku szkolnym 2023/2024:</h3>
+        <ul class="list">
+          <li>29 kwietnia 2024</li>
+          <li>30 kwietnia 2024</li>
+          <li>2 maja 2024</li>
+          <li>6 maja 2024</li>
+          <li>7 maja 2024</li>
+          <li>8 maja 2024</li>
+          <li>9 maja 2024</li>
+          <li>31 maja 2024</li>
+        </ul>
+      </div>
+      <h3 class="table__heading">
+        Dni dostępności nauczycieli w szkole na rok szkolny 2023/2024:
+      </h3>
+      <div class="container block parents-info-block__table">
+        <table class="info-table">
+          <thead>
+            <tr>
+              <th style="text-align: left">Nazwisko</th>
+              <th>Dzień</th>
+              <th>Godz</th>
+              <th>Sala</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for teacher in teachers %}
+            <tr>
+              <td style="text-align: left">{{ teacher.name }}</td>
+              <td>{{ teacher.day }}</td>
+              <td>{{ teacher.time }}</td>
+              <td class="info-table__room">{{ teacher.room_number }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <section class="block table-mobile">
+      {% for teacher in teachers %}
+      <div class="container table-mobile__content">
+        <span>{{ teacher.name }}</span>
+        <ul class="list">
+          <li>{{ teacher.day }}</li>
+          <li>{{ teacher.time }}</li>
+          <li>Numer Sali: {{ teacher.room_number }}</li>
+        </ul>
+      </div>
+      {% endfor %}
+    </section>
+
+    <footer class="block contact-block">
+      <div class="container contact-block__content">
+        <a href="tel: +48297721429" target="_blank"
+          ><i class="fa-solid fa-phone"></i>+48297721429</a
+        >
+        <a
+          href="mailto: zsp.myszyniec@powiatostrolecki.pl"
+          target="_blank"
+          class="contact-block__mail"
+          ><i class="fa-solid fa-envelope"></i
+          >zsp.myszyniec@powiatostrolecki.pl</a
+        >
+        <a
+          href="https://www.google.com/maps/place/Zesp%C3%B3%C5%82+Szk%C3%B3%C5%82+Powiatowych+im.ks.+Adama+Bargielskiego+w+Myszy%C5%84cu/@53.3865742,21.341534,17z/data=!3m1!4b1!4m6!3m5!1s0x471e0f561d8ed33f:0xce5bfc54206343d6!8m2!3d53.386571!4d21.3441089!16s%2Fg%2F1hf9wnkqm?entry=ttu"
+          target="_blank"
+          class="contact-block__location"
+          ><i class="fa-solid fa-location-dot"></i>07-430 Myszyniec, ul. Dzieci
+          Polskich 5</a
+        >
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/ef2d73a8ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

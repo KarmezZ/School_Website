@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rekrutacja</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <nav class="block block--dark collapsible nav">
+      <img
+        src="{% static 'icons/menu.svg' %}"
+        alt=""
+        class="icon collapsible__toggler nav__toggler"
+      />
+      <div class="collapsible__content">
+        <ul class="list nav__content">
+          <li><a href="/">Strona głowna</a></li>
+          <li><a href="{% url 'website:news_page' %}">Aktualności</a></li>
+          <li>
+            <a
+              href="{% url 'website:rekrutacja_page' %}"
+              style="color: #00d9ff; font-weight: 700"
+              >Rekrutacja</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'website:info_parents_page' %}"
+              >Informacje dla rodziców</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'website:sekretariat_page' %}">Sekretariat</a>
+          </li>
+          <li>
+            <a href="{% url 'website:zdjęcia_page' %}">Zdjęcia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <article class="block recruitment-block">
+      <h2 class="recruitment-block__heading">Rekrutacja</h2>
+      <div class="recruitment-block__content">
+        <div>
+          <p>
+            INFORMACJA DLA KANDYDATA O TERMINACH SKŁADANIA DOKUMENTÓW ROK
+            SZKOLNY 2023-2024:
+          </p>
+          <ol class="recruitment-block__list">
+            <li>
+              Termin składania wniosków o przyjęcie: od
+              <span>15 maja</span> 2024 do <span>29 maja</span> 2024 r. do
+              godz.15:00
+            </li>
+            <li>
+              Termin składania świadectw ukończenia szkoły podstawowej i
+              zaświadczenia z egzaminu ósmoklasisty: od
+              <span>3 lipca 2024 do 10 lipca 2024 do godz. 15:00.</span> Przy
+              składaniu oryginalnych dokumentów kandydat przynosi również
+              podpisane na odwrocie zdjęcie legitymacyjne -1szt.
+            </li>
+            <li>
+              Od <span>15 maja 2024 r. do 22 lipca 2024</span> kandydatom,
+              którzy dokonali wyboru kształcenia w danym zawodzie, wskazując
+              szkołę jako szkołę pierwszego wyboru. w Technikum i Branżowej
+              Szkole I Stopnia, dyrektor Zespołu Szkół Powiatowych w Myszyńcu
+              wydaje skierowania na badanie lekarskie do lekarza medycyny pracy.
+            </li>
+            <li>
+              Lista kandydatów zakwalifikowanych wywieszona będzie na drzwiach
+              głównych szkoły dnia <span>19 lipca</span> 2024r.
+            </li>
+            <li>
+              Lista kandydatów przyjętych wywieszona będzie na drzwiach głównych
+              szkoły dnia <span>25 lipca</span> 2024r.
+            </li>
+          </ol>
+        </div>
+        <div>
+          <p>
+            DOKUMENTY POTRZEBNE DO ZAWARCIA UMOWY MŁODOCIANEGO PRACOWNIKA Z
+            PRACODAWCĄ:
+          </p>
+          <ol class="recruitment-block__list">
+            <li>Kserokopia świadectwa ukończenia szkoły podstawowej</li>
+            <li>Wyciąg aktu urodzenia</li>
+            <li>Numer pesel, dokładny adres zamieszkania</li>
+            <li>
+              Zaświadczenie o przyjęciu do szkoły ponadpodstawowej (dostępne w
+              sekretariacie po ogłoszeniu wyników rekrutacji)
+            </li>
+            <li>
+              Opinia z Poradni Psychologiczno-Pedagogicznej o możliwości
+              podjęcia praktycznej nauki zawodu – jeśli uczeń nie ma ukończonego
+              15 roku życia
+            </li>
+            <li>
+              Skierowanie od pracodawcy na badania do lekarza medycyny pracy do
+              podjęcia pracy w wybranym zawodzie
+            </li>
+            <li>
+              Książeczka zdrowia (tzw. sanepidowska) podpisana przez
+              uprawnionego lekarza rodzinnego
+            </li>
+          </ol>
+        </div>
+      </div>
+      <div class="wniosek-container">
+        <a
+          href="{% static 'pdfs/WNIOSEK-O-PRZYJECIE-DO-SZKOLY-2024_2025.pdf' %}"
+          download
+          class="btn btn--primary"
+          >Wniosek o przyjęcie do szkoły ponadpodstawowej</a
+        >
+      </div>
+    </article>
+    <footer class="block contact-block">
+      <div class="container contact-block__content">
+        <a href="tel: +48297721429" target="_blank"
+          ><i class="fa-solid fa-phone"></i>+48297721429</a
+        >
+        <a
+          href="mailto: zsp.myszyniec@powiatostrolecki.pl"
+          target="_blank"
+          class="contact-block__mail"
+          ><i class="fa-solid fa-envelope"></i
+          >zsp.myszyniec@powiatostrolecki.pl</a
+        >
+        <a
+          href="https://www.google.com/maps/place/Zesp%C3%B3%C5%82+Szk%C3%B3%C5%82+Powiatowych+im.ks.+Adama+Bargielskiego+w+Myszy%C5%84cu/@53.3865742,21.341534,17z/data=!3m1!4b1!4m6!3m5!1s0x471e0f561d8ed33f:0xce5bfc54206343d6!8m2!3d53.386571!4d21.3441089!16s%2Fg%2F1hf9wnkqm?entry=ttu"
+          target="_blank"
+          class="contact-block__location"
+          ><i class="fa-solid fa-location-dot"></i>07-430 Myszyniec, ul. Dzieci
+          Polskich 5</a
+        >
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/ef2d73a8ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

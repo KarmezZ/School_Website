@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aktualności</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <nav class="block block--dark collapsible nav">
+      <img
+        src="{% static 'icons/menu.svg' %}"
+        alt=""
+        class="icon collapsible__toggler nav__toggler"
+      />
+      <div class="collapsible__content">
+        <ul class="list nav__content">
+          <li><a href="/">Strona głowna</a></li>
+          <li>
+            <a
+              href="{% url 'website:news_page' %}"
+              style="color: #00d9ff; font-weight: 700"
+              >Aktualności</a
+            >
+          </li>
+          <li><a href="{% url 'website:rekrutacja_page' %}">Rekrutacja</a></li>
+          <li>
+            <a href="{% url 'website:info_parents_page' %}"
+              >Informacje dla rodziców</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'website:sekretariat_page' %}">Sekretariat</a>
+          </li>
+          <li>
+            <a href="{% url 'website:zdjęcia_page' %}">Zdjęcia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="block news-block">
+      <div class="container news-block__content">
+        <div class="news-block__header">
+          <h3 class="news-block__heading">Edukacja z wojskiem</h3>
+          <span class="news-block__date">13 czerwca 2024</span>
+        </div>
+        <p>
+          12 czerwca 2024 roku w naszej szkole dobyło się spotkanie z
+          przedstawicielami Jednostki Wojskowej z Przasnysza. Podczas spotkania
+          dowiedzieliśmy się o zagrożeniach jakie mogą nas spotkać w codziennym
+          życiu. Zostaliśmy m.in., przeszkoleni jak udzielać pierwszej pomocy,
+          jak zachować się w sytuacji zagrożenia, jakie są alarmy i jak na nie
+          reagować oraz nauczyliśmy się jak postępować podczas pożaru. Mieliśmy
+          również możliwość zapoznania się z wyposażeniem wojska używanego, np.
+          podczas skażenia (specjalne kombinezony ochronne, maski gazowe).
+          Dzięki temu spotkaniu zdobyliśmy ogromną wiedzę, która na pewno przyda
+          nam się w przyszłości. Dziękujemy!
+        </p>
+      </div>
+      <div class="container news-block__content">
+        <div class="news-block__header">
+          <h3 class="news-block__heading">DIECEZJALNY DZIEŃ DZIECKA</h3>
+          <span class="news-block__date">10 czerwca 2024</span>
+        </div>
+        <p>
+          08.06.2024r. – udział uczniów z klas I, II, III Liceum
+          Ogólnokształcącego w charakterze wolontariuszy w 2. Diecezjalnym Dniu
+          Dziecka. Już po raz drugi Parafia pw. Trójcy Przenajświętszej w
+          Myszyńcu zorganizowała Diecezjalny Dzień Dziecka. Jak przed rokiem
+          członkowie dziecięcych grup i wspólnot katolickich integrowali się w
+          Kurpiowskiej Krainie w Wykrocie. Uczniowie z naszej szkoły w ramach
+          wolontariatu pomagali w organizacji tego wydarzenia. Był to dla nas
+          miło spędzony czas, który przyniósł nam wiele radości. Cieszymy się,
+          że mogliśmy okazać nasze wsparcie i pomoc…
+        </p>
+      </div>
+      <div class="container news-block__content">
+        <div class="news-block__header">
+          <h3 class="news-block__heading">MYSZYNIECKI ARCHIFEST</h3>
+          <span class="news-block__date">10 czerwca 2024</span>
+        </div>
+        <p>
+          07 czerwca 2024 w Regionalnym Centrum Kultury Kurpiowskiej odbył się
+          1. Myszyniecki Archifest. Wzięli w nim udział uczniowie Liceum
+          Ogólnokształcącego oraz Technikum Agrobiznesu. Pierwszym punktem
+          Archifestu był spektakl multimedialny obrazów p. Piotra Kobrzyńskiego
+          i ekfrazami p. Marii Pawłowskiej. Połączenie ze sobą twórczości tych
+          dwojga artystów oraz oprawy muzycznej sprawiło, iż spektakl ten stał
+          się niezapomnianym i niezwykłym doświadczeniem dla oglądających. Była
+          to swego rodzaju podróż w głąb ludzkiej duszy… Drugim punktem programu
+          były warsztaty pod hasłem „Kilka słów o Archiwach Społecznych”.
+          Warsztaty te prowadził Animator Kultury RCKK p. Tomasz Mierzejek oraz
+          p. Monika Kozłowska-dyrektor MGBP. Młodzież dowiedziała się , czym
+          zajmują się archiwa społeczne, ile jest takich archiwów w naszym
+          regionie, jakie zbiory obejmują archiwa społeczne, kto może zostać
+          archiwistą oraz jak można zostać wolontariuszem w archiwum społecznym.
+          Trzecim punktem programu było otwarcie wystawy pt. „Myszynieckie
+          Zbiory Społeczne”, które zostały zgromadzone przez myszynieckie
+          Archiwum Społeczne. Na zakończenie młodzież zwiedziła Multimedialne
+          Muzeum w Dzwonnicy Myszynieckiej. Jak twierdzi młodzież, było to
+          bardzo ciekawe doświadczenie, które uwrażliwiło ich artystycznie i
+          wzbogaciło wiedzę z dziedziny dotychczas im nieznanej… Jesteśmy
+          wdzięczni za możliwość wzięcia udziału w tak wspaniałym wydarzeniu:
+          Uczniowie klas: ILO, II LO , III LO i I TA oraz opiekunowie: p. M.
+          Olkowska, p.M.Batorska i p. A.Jachimczyk
+        </p>
+      </div>
+    </section>
+    <footer class="block contact-block">
+      <div class="container contact-block__content">
+        <a href="tel: +48297721429" target="_blank"
+          ><i class="fa-solid fa-phone"></i>+48297721429</a
+        >
+        <a
+          href="mailto: zsp.myszyniec@powiatostrolecki.pl"
+          target="_blank"
+          class="contact-block__mail"
+          ><i class="fa-solid fa-envelope"></i
+          >zsp.myszyniec@powiatostrolecki.pl</a
+        >
+        <a
+          href="https://www.google.com/maps/place/Zesp%C3%B3%C5%82+Szk%C3%B3%C5%82+Powiatowych+im.ks.+Adama+Bargielskiego+w+Myszy%C5%84cu/@53.3865742,21.341534,17z/data=!3m1!4b1!4m6!3m5!1s0x471e0f561d8ed33f:0xce5bfc54206343d6!8m2!3d53.386571!4d21.3441089!16s%2Fg%2F1hf9wnkqm?entry=ttu"
+          target="_blank"
+          class="contact-block__location"
+          ><i class="fa-solid fa-location-dot"></i>07-430 Myszyniec, ul. Dzieci
+          Polskich 5</a
+        >
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/ef2d73a8ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>
