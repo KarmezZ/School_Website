@@ -1,171 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     {% load static %}
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
-            name="description"
-            content="Oficjalna Strona Internetowa Zsp Myszyniec"
+      name="description"
+      content="Oficjalna Strona Internetowa Zsp Myszyniec"
     />
     <meta
-            property="og:title"
-            content="Zsp Myszyniec - Zespół Szkół Powiatowych w Myszyńcu"
+      property="og:title"
+      content="Zsp Myszyniec - Zespół Szkół Powiatowych w Myszyńcu"
     />
-    <meta property="og:description" content="Kształć się w wybranym kierunku"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:image" content="http://"/>
-    <meta property="og:url" content="https://"/>
+    <meta property="og:description" content="Kształć się w wybranym kierunku" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="http://" />
+    <meta property="og:url" content="https://" />
     <title>ZSP MYSZYNIEC</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
-            rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}"/>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
-</head>
-<body>
-<nav class="block block--dark collapsible nav">
-    <img
-            src="{% static 'icons/menu.svg' %}"
-            alt=""
-            class="icon collapsible__toggler nav__toggler"
-    />
-    <div class="collapsible__content">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <nav class="block block--dark collapsible nav">
+      <img
+        src="{% static 'icons/menu.svg' %}"
+        alt=""
+        class="icon collapsible__toggler nav__toggler"
+      />
+      <div class="collapsible__content">
         <ul class="list nav__content">
-            <li>
-                <a href="/" style="color: #00d9ff; font-weight: 700"
-                >Strona głowna</a
-                >
-            </li>
-            <li><a href="{% url 'website:news_page' %}">Aktualności</a></li>
-            <li><a href="{% url 'website:rekrutacja_page' %}">Rekrutacja</a></li>
-            <li>
-                <a href="{% url 'website:info_parents_page' %}"
-                >Informacje dla rodziców</a
-                >
-            </li>
-            <li>
-                <a href="{% url 'website:sekretariat_page' %}">Sekretariat</a>
-            </li>
-            <li>
-                <a href="{% url 'website:zdjęcia_page' %}">Zdjęcia</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-<section class="block block--dark">
-    <div class="container grid grid--1x2 hero">
-        <div class="hero__header">
-            <h1>
-                Zespół Szkół Powiatowych im. ks. Adama Bargielskiego w Myszyńcu
-            </h1>
-            <a
-                    class="btn btn--primary hero__button"
-                    href="https://app.lapentor.com/sphere/zespol-szkol-powiatowych-w-myszyncu"
-                    target="_blank"
-            >Wirtualny Spacer</a
+          <li>
+            <a href="/" style="color: #00d9ff; font-weight: 700"
+              >Strona głowna</a
             >
+          </li>
+          <li><a href="{% url 'website:news_page' %}">Aktualności</a></li>
+          <li><a href="{% url 'website:rekrutacja_page' %}">Rekrutacja</a></li>
+          <li>
+            <a href="{% url 'website:info_parents_page' %}"
+              >Informacje dla rodziców</a
+            >
+          </li>
+          <li>
+            <a href="{% url 'website:sekretariat_page' %}">Sekretariat</a>
+          </li>
+          <li>
+            <a href="{% url 'website:zdjęcia_page' %}">Zdjęcia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <section class="block block--dark">
+      <div class="container grid grid--1x2 hero">
+        <div class="hero__header">
+          <h1>
+            Zespół Szkół Powiatowych im. ks. Adama Bargielskiego w Myszyńcu
+          </h1>
+          <a
+            class="btn btn--primary hero__button"
+            href="https://app.lapentor.com/sphere/zespol-szkol-powiatowych-w-myszyncu"
+            target="_blank"
+            >Wirtualny Spacer</a
+          >
         </div>
         <picture>
-            <source
-                    type="image/webp"
-                    srcset="{% static 'images/main.webp' %} 1x, {% static 'images/main@2x.webp' %} 2x"
-            />
-            <source
-                    type="image/jpg"
-                    srcset="{% static 'images/main.jpg' %} 1x, {% static 'images/main@2x.jpg' %} 2x"
-            />
-            <img
-                    src="{% static 'images/main@2x.jpg' %}"
-                    alt="logo"
-                    class="hero__image"
-            />
+          <source
+            type="image/webp"
+            srcset="{% static 'images/main.webp' %} 1x, {% static 'images/main@2x.webp' %} 2x"
+          />
+          <source
+            type="image/jpg"
+            srcset="{% static 'images/main.jpg' %} 1x, {% static 'images/main@2x.jpg' %} 2x"
+          />
+          <img
+            src="{% static 'images/main@2x.jpg' %}"
+            alt="logo"
+            class="hero__image"
+          />
         </picture>
-    </div>
-</section>
-<section class="block container education-block">
-    <h2>Kierunki Kształcenia</h2>
-    <div class="grid grid--1x2">
+      </div>
+    </section>
+    <section class="block container education-block">
+      <h2>Kierunki Kształcenia</h2>
+      <div class="grid grid--1x2">
         <div class="education__content">
-            <div class="education__item">
-                <h3>Liceum</h3>
-                <ul class="list">
-                    <li>Matematyka</li>
-                    <li>Biologia</li>
-                    <li>Angielski</li>
-                    <li>Geografia</li>
-                </ul>
-            </div>
+          <div class="education__item">
+            <h3>Liceum</h3>
+            <ul class="list">
+              <li>Matematyka</li>
+              <li>Biologia</li>
+              <li>Angielski</li>
+              <li>Geografia</li>
+            </ul>
+          </div>
         </div>
         <div class="education__content">
-            <div class="education__item">
-                <h3>Technikum</h3>
-                <ul class="list">
-                    <li>Technik Informatyk (Klasa mundurowa)</li>
-                    <li>Technik Ochrony Środowiska</li>
-                    <li>Technik Agrobiznesu</li>
-                </ul>
-            </div>
+          <div class="education__item">
+            <h3>Technikum</h3>
+            <ul class="list">
+              <li>Technik Informatyk (Klasa mundurowa)</li>
+              <li>Technik Ochrony Środowiska</li>
+              <li>Technik Agrobiznesu</li>
+            </ul>
+          </div>
         </div>
-    </div>
-    <div class="education__content szkola-branzowa">
+      </div>
+      <div class="education__content szkola-branzowa">
         <h3>Branżowa Szkoła I Stopnia</h3>
         <div class="grid grid--1x2">
-            <div class="education__item">
-                <ul class="list szkola-branzowa__list">
-                    <li>Cukiernik</li>
-                    <li>Elektromechanik</li>
-                    <li>Elektryk</li>
-                    <li>Fryzjer</li>
-                    <li>Krawiec</li>
-                    <li>Kucharz</li>
-                    <li>Mechanik pojazdów samochodowych</li>
-                    <li>Monter sieci, instalacji i urządzeń sanitarnych</li>
-                </ul>
-            </div>
-            <div class="education__item">
-                <ul class="list szkola-branzowa__list">
-                    <li>Piekarz</li>
-                    <li>Rolnik</li>
-                    <li>Wędliniarz</li>
-                    <li>Sprzedawca</li>
-                    <li>Stolarz</li>
-                    <li>Ślusarz</li>
-                    <li>Murarz-tynkarz</li>
-                    <li>Mechanik-operator pojazdów i maszyn rolniczych</li>
-                </ul>
-            </div>
+          <div class="education__item">
+            <ul class="list szkola-branzowa__list">
+              <li>Cukiernik</li>
+              <li>Elektromechanik</li>
+              <li>Elektryk</li>
+              <li>Fryzjer</li>
+              <li>Krawiec</li>
+              <li>Kucharz</li>
+              <li>Mechanik pojazdów samochodowych</li>
+              <li>Monter sieci, instalacji i urządzeń sanitarnych</li>
+            </ul>
+          </div>
+          <div class="education__item">
+            <ul class="list szkola-branzowa__list">
+              <li>Piekarz</li>
+              <li>Rolnik</li>
+              <li>Wędliniarz</li>
+              <li>Sprzedawca</li>
+              <li>Stolarz</li>
+              <li>Ślusarz</li>
+              <li>Murarz-tynkarz</li>
+              <li>Mechanik-operator pojazdów i maszyn rolniczych</li>
+            </ul>
+          </div>
         </div>
-    </div>
-</section>
-<footer class="block contact-block">
-    <div class="container contact-block__content">
+      </div>
+    </section>
+    <footer class="block contact-block">
+      <div class="container contact-block__content">
         <a href="tel: +48297721429" target="_blank"
-        ><i class="fa-solid fa-phone"></i>+48297721429</a
+          ><i class="fa-solid fa-phone"></i>+48297721429</a
         >
         <a
-                href="mailto: zsp.myszyniec@powiatostrolecki.pl"
-                target="_blank"
-                class="contact-block__mail"
-        ><i class="fa-solid fa-envelope"></i
-        >zsp.myszyniec@powiatostrolecki.pl</a
+          href="mailto: zsp.myszyniec@powiatostrolecki.pl"
+          target="_blank"
+          class="contact-block__mail"
+          ><i class="fa-solid fa-envelope"></i
+          >zsp.myszyniec@powiatostrolecki.pl</a
         >
         <a
-                href="https://www.google.com/maps/place/Zesp%C3%B3%C5%82+Szk%C3%B3%C5%82+Powiatowych+im.ks.+Adama+Bargielskiego+w+Myszy%C5%84cu/@53.3865742,21.341534,17z/data=!3m1!4b1!4m6!3m5!1s0x471e0f561d8ed33f:0xce5bfc54206343d6!8m2!3d53.386571!4d21.3441089!16s%2Fg%2F1hf9wnkqm?entry=ttu"
-                target="_blank"
-                class="contact-block__location"
-        ><i class="fa-solid fa-location-dot"></i>07-430 Myszyniec, ul. Dzieci
-            Polskich 5</a
+          href="https://www.google.com/maps/place/Zesp%C3%B3%C5%82+Szk%C3%B3%C5%82+Powiatowych+im.ks.+Adama+Bargielskiego+w+Myszy%C5%84cu/@53.3865742,21.341534,17z/data=!3m1!4b1!4m6!3m5!1s0x471e0f561d8ed33f:0xce5bfc54206343d6!8m2!3d53.386571!4d21.3441089!16s%2Fg%2F1hf9wnkqm?entry=ttu"
+          target="_blank"
+          class="contact-block__location"
+          ><i class="fa-solid fa-location-dot"></i>07-430 Myszyniec, ul. Dzieci
+          Polskich 5</a
         >
-    </div>
-</footer>
-<script
-        src="https://kit.fontawesome.com/ef2d73a8ee.js"
-        crossorigin="anonymous"
-></script>
-<script src="{% static 'js/script.js' %}"></script>
-</body>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/ef2d73a8ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
 </html>
