@@ -363,13 +363,10 @@ p {
 .wniosek-container {
   margin-top: 10rem;
 }
-.wniosek-container .btn--pdf {
+.wniosek__btn {
   display: none;
 }
 @media screen and (width < 720px) {
-  .wniosek-container .btn {
-    display: none;
-  }
   .wniosek-container .btn--pdf {
     display: block;
     text-transform: uppercase;
@@ -380,6 +377,14 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wniosek__btn {
+    display: inline-block;
+  }
+  .wniosek__btn-pdf {
+    display: none;
   }
 }
 @media screen and (min-width: 1024px) {
