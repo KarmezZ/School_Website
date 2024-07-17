@@ -363,8 +363,28 @@ p {
 .wniosek-container {
   margin-top: 10rem;
 }
-.wniosek-container .btn {
-  white-space: wrap;
+.wniosek__btn {
+  display: none;
+}
+@media screen and (width < 720px) {
+  .wniosek-container .btn--pdf {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+  }
+  .wniosek-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .wniosek__btn {
+    display: inline-block;
+  }
+  .wniosek__btn-pdf {
+    display: none;
+  }
 }
 @media screen and (min-width: 1024px) {
   .recruitment-block__list li {
@@ -528,6 +548,7 @@ p {
 .sekretariat-image {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .sekretariat-image img {
   border-radius: 20px;
