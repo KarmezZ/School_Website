@@ -368,7 +368,6 @@ p {
 }
 @media screen and (width < 720px) {
   .wniosek-container .btn--pdf {
-    display: block;
     text-transform: uppercase;
     text-align: center;
     font-weight: 400;
